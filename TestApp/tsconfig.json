@@ -1,0 +1,10 @@
+{
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "paths": {
+      "react-native-kustom-inapp-sdk": [
+        "../src/index"
+      ]
+    }
+  }
+}

@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		428AFFF78335FB622703B578 /* libPods-RNKustomMobileSDK-RNKustomMobileSDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF59DBD38B0F39E75B7EC33 /* libPods-RNKustomMobileSDK-RNKustomMobileSDKTests.a */; };
+		57195531370E888EF7A68FFA /* libPods-RNKustomMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4F25CC224C8D6C2B3A75F2 /* libPods-RNKustomMobileSDK.a */; };
+		7917D757255C45FB00E16799 /* libRNKustomMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 134814201AA4EA6300B7C361 /* libRNKustomMobileSDK.a */; };
+		79BD25FA2BC97A3000D2D92A /* KustomCheckoutViewManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79BD25F92BC97A3000D2D92A /* KustomCheckoutViewManager.mm */; };
+		79BD25FC2BC97B0900D2D92A /* KustomCheckoutViewWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79BD25FB2BC97B0900D2D92A /* KustomCheckoutViewWrapper.mm */; };
+		79BD26002BCD4F6C00D2D92A /* KustomCheckoutViewWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79BD25FF2BCD4F6C00D2D92A /* KustomCheckoutViewWrapper.mm */; };
+		79BD26042BCD572600D2D92A /* RNMobileSDKUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79BD26032BCD572600D2D92A /* RNMobileSDKUtils.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7917D758255C45FB00E16799 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58B511D31A9E6C8500147676 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B511DA1A9E6C8500147676;
+			remoteInfo = KlarnaInAppSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		134814201AA4EA6300B7C361 /* libRNKustomMobileSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNKustomMobileSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4F25CC224C8D6C2B3A75F2 /* libPods-RNKustomMobileSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNKustomMobileSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47F52777BFEE3B6AC6650758 /* Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.release.xcconfig"; path = "Target Support Files/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D67BB6678D3F21FA6B95007 /* Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.debug.xcconfig"; path = "Target Support Files/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7917D752255C45FB00E16799 /* RNKustomMobileSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNKustomMobileSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7917D756255C45FB00E16799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796795862C1B39E700BAB0C1 /* KustomCheckoutViewWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KustomCheckoutViewWrapper.h; sourceTree = "<group>"; };
+		79BD25F82BC97A0100D2D92A /* KustomCheckoutViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KustomCheckoutViewManager.h; sourceTree = "<group>"; };
+		79BD25F92BC97A3000D2D92A /* KustomCheckoutViewManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KustomCheckoutViewManager.mm; sourceTree = "<group>"; };
+		79BD25FB2BC97B0900D2D92A /* KustomCheckoutViewWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KustomCheckoutViewWrapper.mm; sourceTree = "<group>"; };
+		79BD25FF2BCD4F6C00D2D92A /* KustomCheckoutViewWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KustomCheckoutViewWrapper.mm; sourceTree = "<group>"; };
+		79BD26022BCD56D400D2D92A /* RNMobileSDKUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNMobileSDKUtils.h; sourceTree = "<group>"; };
+		79BD26032BCD572600D2D92A /* RNMobileSDKUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RNMobileSDKUtils.mm; sourceTree = "<group>"; };
+		79E2A0B02BFBA653002923A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C6F9E0083B123E0E8E179173 /* Pods-RNKustomMobileSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNKustomMobileSDK.release.xcconfig"; path = "Target Support Files/Pods-RNKustomMobileSDK/Pods-RNKustomMobileSDK.release.xcconfig"; sourceTree = "<group>"; };
+		D384E6DDC3735610F87A2D2B /* Pods-RNKustomMobileSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNKustomMobileSDK.debug.xcconfig"; path = "Target Support Files/Pods-RNKustomMobileSDK/Pods-RNKustomMobileSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		EFF59DBD38B0F39E75B7EC33 /* libPods-RNKustomMobileSDK-RNKustomMobileSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNKustomMobileSDK-RNKustomMobileSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57195531370E888EF7A68FFA /* libPods-RNKustomMobileSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7917D74F255C45FB00E16799 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7917D757255C45FB00E16799 /* libRNKustomMobileSDK.a in Frameworks */,
+				428AFFF78335FB622703B578 /* libPods-RNKustomMobileSDK-RNKustomMobileSDKTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134814211AA4EA7D00B7C361 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				134814201AA4EA6300B7C361 /* libRNKustomMobileSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58B511D21A9E6C8500147676 = {
+			isa = PBXGroup;
+			children = (
+				7917D74C255C445E00E16799 /* Sources */,
+				7917D753255C45FB00E16799 /* Tests */,
+				7917D75F255C460300E16799 /* Configs */,
+				134814211AA4EA7D00B7C361 /* Products */,
+				7917D752255C45FB00E16799 /* RNKustomMobileSDKTests.xctest */,
+				63E5D4CBB935C268EFA6C6E9 /* Pods */,
+				CE954ABC354059DF5E32C8CA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63E5D4CBB935C268EFA6C6E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D384E6DDC3735610F87A2D2B /* Pods-RNKustomMobileSDK.debug.xcconfig */,
+				C6F9E0083B123E0E8E179173 /* Pods-RNKustomMobileSDK.release.xcconfig */,
+				5D67BB6678D3F21FA6B95007 /* Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.debug.xcconfig */,
+				47F52777BFEE3B6AC6650758 /* Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7917D74C255C445E00E16799 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				79BD26012BCD56C000D2D92A /* common */,
+				9CDEDC2923475BAC006C9C97 /* view */,
+				79BD25F82BC97A0100D2D92A /* KustomCheckoutViewManager.h */,
+				79BD25F92BC97A3000D2D92A /* KustomCheckoutViewManager.mm */,
+				79E2A0B02BFBA653002923A5 /* PrefixHeader.pch */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7917D753255C45FB00E16799 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		7917D75F255C460300E16799 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				7917D760255C464600E16799 /* Tests */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		7917D760255C464600E16799 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7917D756255C45FB00E16799 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		792F67BA2AB8AD7D00675E18 /* newarch */ = {
+			isa = PBXGroup;
+			children = (
+				79BD25FF2BCD4F6C00D2D92A /* KustomCheckoutViewWrapper.mm */,
+			);
+			path = newarch;
+			sourceTree = "<group>";
+		};
+		792F67BD2AB8AD7D00675E18 /* oldarch */ = {
+			isa = PBXGroup;
+			children = (
+				79BD25FB2BC97B0900D2D92A /* KustomCheckoutViewWrapper.mm */,
+			);
+			path = oldarch;
+			sourceTree = "<group>";
+		};
+		79BD26012BCD56C000D2D92A /* common */ = {
+			isa = PBXGroup;
+			children = (
+				79BD26022BCD56D400D2D92A /* RNMobileSDKUtils.h */,
+				79BD26032BCD572600D2D92A /* RNMobileSDKUtils.mm */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		9CDEDC2923475BAC006C9C97 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				796795862C1B39E700BAB0C1 /* KustomCheckoutViewWrapper.h */,
+				792F67BA2AB8AD7D00675E18 /* newarch */,
+				792F67BD2AB8AD7D00675E18 /* oldarch */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		CE954ABC354059DF5E32C8CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B4F25CC224C8D6C2B3A75F2 /* libPods-RNKustomMobileSDK.a */,
+				EFF59DBD38B0F39E75B7EC33 /* libPods-RNKustomMobileSDK-RNKustomMobileSDKTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58B511DA1A9E6C8500147676 /* RNKustomMobileSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNKustomMobileSDK" */;
+			buildPhases = (
+				16ACFD32579653CA379E1EFA /* [CP] Check Pods Manifest.lock */,
+				58B511D71A9E6C8500147676 /* Sources */,
+				58B511D81A9E6C8500147676 /* Frameworks */,
+				58B511D91A9E6C8500147676 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNKustomMobileSDK;
+			productName = RCTDataManager;
+			productReference = 134814201AA4EA6300B7C361 /* libRNKustomMobileSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7917D751255C45FB00E16799 /* RNKustomMobileSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7917D75A255C45FB00E16799 /* Build configuration list for PBXNativeTarget "RNKustomMobileSDKTests" */;
+			buildPhases = (
+				F3202A1F4D06889426784FDA /* [CP] Check Pods Manifest.lock */,
+				7917D74E255C45FB00E16799 /* Sources */,
+				7917D74F255C45FB00E16799 /* Frameworks */,
+				7917D750255C45FB00E16799 /* Resources */,
+				EA91F2D2A6F440BAD442A23C /* [CP] Embed Pods Frameworks */,
+				F8812278ACEE51F742D42DB3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7917D759255C45FB00E16799 /* PBXTargetDependency */,
+			);
+			name = RNKustomMobileSDKTests;
+			productName = Tests;
+			productReference = 7917D752255C45FB00E16799 /* RNKustomMobileSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58B511D31A9E6C8500147676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					58B511DA1A9E6C8500147676 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					7917D751255C45FB00E16799 = {
+						CreatedOnToolsVersion = 12.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNKustomMobileSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = 58B511D21A9E6C8500147676;
+			productRefGroup = 58B511D21A9E6C8500147676;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58B511DA1A9E6C8500147676 /* RNKustomMobileSDK */,
+				7917D751255C45FB00E16799 /* RNKustomMobileSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7917D750255C45FB00E16799 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16ACFD32579653CA379E1EFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNKustomMobileSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA91F2D2A6F440BAD442A23C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/KlarnaMobileSDK/basic/KlarnaCore.framework/KlarnaCore",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/KlarnaMobileSDK/basic/KlarnaMobileSDK.framework/KlarnaMobileSDK",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/KustomMobileSDK/KustomMobileSDK.framework/KustomMobileSDK",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KlarnaCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KlarnaMobileSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KustomMobileSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3202A1F4D06889426784FDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8812278ACEE51F742D42DB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests/Pods-RNKustomMobileSDK-RNKustomMobileSDKTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58B511D71A9E6C8500147676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79BD25FC2BC97B0900D2D92A /* KustomCheckoutViewWrapper.mm in Sources */,
+				79BD26002BCD4F6C00D2D92A /* KustomCheckoutViewWrapper.mm in Sources */,
+				79BD26042BCD572600D2D92A /* RNMobileSDKUtils.mm in Sources */,
+				79BD25FA2BC97A3000D2D92A /* KustomCheckoutViewManager.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7917D74E255C45FB00E16799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7917D759255C45FB00E16799 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58B511DA1A9E6C8500147676 /* RNKustomMobileSDK */;
+			targetProxy = 7917D758255C45FB00E16799 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		58B511ED1A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58B511EE1A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58B511F01A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D384E6DDC3735610F87A2D2B /* Pods-RNKustomMobileSDK.debug.xcconfig */;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNKustomMobileSDK;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6F9E0083B123E0E8E179173 /* Pods-RNKustomMobileSDK.release.xcconfig */;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNKustomMobileSDK;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7917D75B255C45FB00E16799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D67BB6678D3F21FA6B95007 /* Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Configs/Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klarna.mobile.sdk.reactnative.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7917D75C255C45FB00E16799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F52777BFEE3B6AC6650758 /* Pods-RNKustomMobileSDK-RNKustomMobileSDKTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Configs/Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.klarna.mobile.sdk.reactnative.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNKustomMobileSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511ED1A9E6C8500147676 /* Debug */,
+				58B511EE1A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNKustomMobileSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511F01A9E6C8500147676 /* Debug */,
+				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7917D75A255C45FB00E16799 /* Build configuration list for PBXNativeTarget "RNKustomMobileSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7917D75B255C45FB00E16799 /* Debug */,
+				7917D75C255C45FB00E16799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+}
