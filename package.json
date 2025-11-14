@@ -51,7 +51,7 @@
     "sdk"
   ],
   "repository": "https://github.com/Kustom-Checkout/react-native-kustom-inapp-sdk",
-  "author": "Mobile SDK <mobile.sdk@klarna.com>",
+  "author": "Kustom App <kustom-app@kustom.co>",
   "license": "Apache-2.0",
   "homepage": "https://github.com/Kustom-Checkout/react-native-kustom-inapp-sdk#readme",
   "publishConfig": {
