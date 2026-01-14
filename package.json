@@ -1,7 +1,7 @@
 {
   "name": "react-native-kustom-inapp-sdk",
   "title": "Kustom Mobile SDK React Native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This library wraps Kustom Mobile SDK and exposes its functionality as React Native components.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

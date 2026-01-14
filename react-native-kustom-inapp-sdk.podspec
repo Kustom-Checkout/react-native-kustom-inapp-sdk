@@ -48,5 +48,5 @@ Pod::Spec.new do |s|
    end
   end
 
-  s.dependency 'KustomMobileSDK', '1.0.0'
+  s.dependency 'KustomMobileSDK', '1.0.1'
 end
