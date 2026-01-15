@@ -1,6 +1,5 @@
 import {
   Keyboard,
-  ScrollView,
   Text,
   TextInput,
   useColorScheme,
@@ -92,19 +91,17 @@ export default function KustomCheckoutScreen(): React.JSX.Element {
         </View>
         <Text {...testProps('state_events')}>{eventState}</Text>
       </View>
-      <ScrollView>
-        <KustomCheckoutView
-          ref={checkoutViewRef}
-          style={styles.columnItemFill}
-          returnUrl={'returnUrl://'}
-          onEvent={kustomProductEvent => {
-            onEvent(JSON.stringify(kustomProductEvent));
-          }}
-          onError={error => {
-            onEvent(JSON.stringify(error));
-          }}
-        />
-      </ScrollView>
+      <KustomCheckoutView
+        ref={checkoutViewRef}
+        style={styles.columnItemFill}
+        returnUrl={'returnUrl://'}
+        onEvent={kustomProductEvent => {
+          onEvent(JSON.stringify(kustomProductEvent));
+        }}
+        onError={error => {
+          onEvent(JSON.stringify(error));
+        }}
+      />
     </View>
   );
 }
