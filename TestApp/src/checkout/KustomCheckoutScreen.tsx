@@ -1,10 +1,4 @@
-import {
-  Keyboard,
-  Text,
-  TextInput,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { Keyboard, Text, TextInput, useColorScheme, View } from 'react-native';
 import { KustomCheckoutView } from 'react-native-kustom-inapp-sdk';
 import React, { useRef, useState } from 'react';
 import styles, { backgroundStyle } from '../common/ui/Styles';
