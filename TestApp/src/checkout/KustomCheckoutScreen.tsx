@@ -1,11 +1,4 @@
-import {
-  Keyboard,
-  ScrollView,
-  Text,
-  TextInput,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { Keyboard, Text, TextInput, useColorScheme, View } from 'react-native';
 import { KustomCheckoutView } from 'react-native-kustom-inapp-sdk';
 import React, { useRef, useState } from 'react';
 import styles, { backgroundStyle } from '../common/ui/Styles';
@@ -92,19 +85,17 @@ export default function KustomCheckoutScreen(): React.JSX.Element {
         </View>
         <Text {...testProps('state_events')}>{eventState}</Text>
       </View>
-      <ScrollView>
-        <KustomCheckoutView
-          ref={checkoutViewRef}
-          style={styles.columnItemFill}
-          returnUrl={'returnUrl://'}
-          onEvent={kustomProductEvent => {
-            onEvent(JSON.stringify(kustomProductEvent));
-          }}
-          onError={error => {
-            onEvent(JSON.stringify(error));
-          }}
-        />
-      </ScrollView>
+      <KustomCheckoutView
+        ref={checkoutViewRef}
+        style={styles.columnItemFill}
+        returnUrl={'returnUrl://'}
+        onEvent={kustomProductEvent => {
+          onEvent(JSON.stringify(kustomProductEvent));
+        }}
+        onError={error => {
+          onEvent(JSON.stringify(error));
+        }}
+      />
     </View>
   );
 }
