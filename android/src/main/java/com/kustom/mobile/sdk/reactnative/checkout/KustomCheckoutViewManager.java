@@ -40,12 +40,10 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
     private final Map<ResizeObserverWrapperView<KustomCheckoutView>, EventDispatcher> viewToDispatcher;
     private final Map<KustomCheckoutView, ResizeObserverWrapperView<KustomCheckoutView>> checkoutViewToResizeObserverWrapperMap = new WeakHashMap<>();
     private final Map<ResizeObserverWrapperView<KustomCheckoutView>, Integer> setSnippetRetriesMap = new WeakHashMap<>();
-    private final Map<ResizeObserverWrapperView<KustomCheckoutView>, String> snippetMap = new WeakHashMap<>();
 
     private final KustomCheckoutViewEventSender eventSender;
     private final KustomCheckoutViewEventHandler eventHandler;
     private final Handler handler = new Handler(Looper.getMainLooper());
-    private Runnable javascriptInterfaceInjectionRunnable;
 
     public KustomCheckoutViewManager(ReactApplicationContext reactApplicationContext) {
         super();
@@ -59,13 +57,10 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
                 return;
             }
 
+            handler.post(resizeObserverWrapperView::injectListenerToWebView);
+
             Integer retries = setSnippetRetriesMap.getOrDefault(resizeObserverWrapperView, 0);
             if (retries == null || retries >= MAX_SET_SNIPPET_RETRIES) {
-                return;
-            }
-
-            String snippet = snippetMap.get(resizeObserverWrapperView);
-            if (snippet == null) {
                 return;
             }
 
@@ -88,7 +83,7 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
                 }
 
                 if (shouldRetry) {
-                    setSnippet(resizeObserverWrapperView, snippet);
+                    resizeObserverWrapperView.injectListenerToWebView();
                     setSnippetRetriesMap.put(resizeObserverWrapperView, retries + 1);
                 }
             }, 500);
@@ -196,16 +191,8 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
             return;
         }
 
-        snippetMap.put(view, snippet);
-
         kustomCheckoutView.setSnippet(snippet);
         view.addJavascriptInterfaceToWebView();
-
-        if (javascriptInterfaceInjectionRunnable != null) {
-            handler.removeCallbacks(javascriptInterfaceInjectionRunnable);
-        }
-        javascriptInterfaceInjectionRunnable = view::injectListenerToWebView;
-        handler.postDelayed(javascriptInterfaceInjectionRunnable, 500);
     }
 
     @Override
