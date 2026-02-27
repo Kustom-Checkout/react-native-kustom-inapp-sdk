@@ -40,6 +40,10 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
     private final Map<ResizeObserverWrapperView<KustomCheckoutView>, EventDispatcher> viewToDispatcher;
     private final Map<KustomCheckoutView, ResizeObserverWrapperView<KustomCheckoutView>> checkoutViewToResizeObserverWrapperMap = new WeakHashMap<>();
     private final Map<ResizeObserverWrapperView<KustomCheckoutView>, Integer> setSnippetRetriesMap = new WeakHashMap<>();
+    // Tracks the pending 500ms retry runnable per view so it can be cancelled on a new load cycle.
+    private final Map<ResizeObserverWrapperView<KustomCheckoutView>, Runnable> pendingRetryMap = new WeakHashMap<>();
+    // Fallback injection scheduled after setSnippet; cancelled if onLoad fires first.
+    private final Map<ResizeObserverWrapperView<KustomCheckoutView>, Runnable> fallbackInjectionMap = new WeakHashMap<>();
 
     private final KustomCheckoutViewEventSender eventSender;
     private final KustomCheckoutViewEventHandler eventHandler;
@@ -57,6 +61,19 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
                 return;
             }
 
+            // onLoad fired — cancel the setSnippet fallback, it is no longer needed.
+            Runnable fallback = fallbackInjectionMap.remove(resizeObserverWrapperView);
+            if (fallback != null) {
+                handler.removeCallbacks(fallback);
+            }
+
+            // Cancel any stale retry from a previous load cycle and give this cycle a fresh counter.
+            Runnable staleRetry = pendingRetryMap.remove(resizeObserverWrapperView);
+            if (staleRetry != null) {
+                handler.removeCallbacks(staleRetry);
+            }
+            setSnippetRetriesMap.put(resizeObserverWrapperView, 0);
+
             handler.post(resizeObserverWrapperView::injectListenerToWebView);
 
             Integer retries = setSnippetRetriesMap.getOrDefault(resizeObserverWrapperView, 0);
@@ -64,7 +81,9 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
                 return;
             }
 
-            handler.postDelayed(() -> {
+            Runnable retryRunnable = () -> {
+                pendingRetryMap.remove(resizeObserverWrapperView);
+
                 if (kustomCheckoutView == null) {
                     return;
                 }
@@ -86,7 +105,9 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
                     resizeObserverWrapperView.injectListenerToWebView();
                     setSnippetRetriesMap.put(resizeObserverWrapperView, retries + 1);
                 }
-            }, 500);
+            };
+            pendingRetryMap.put(resizeObserverWrapperView, retryRunnable);
+            handler.postDelayed(retryRunnable, 500);
         });
     }
 
@@ -191,8 +212,26 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
             return;
         }
 
+        // Cancel any pending state from a previous snippet before loading the new one.
+        Runnable staleRetry = pendingRetryMap.remove(view);
+        if (staleRetry != null) {
+            handler.removeCallbacks(staleRetry);
+        }
+        Runnable existingFallback = fallbackInjectionMap.remove(view);
+        if (existingFallback != null) {
+            handler.removeCallbacks(existingFallback);
+        }
+
         kustomCheckoutView.setSnippet(snippet);
         view.addJavascriptInterfaceToWebView();
+
+        // Safety net: if the onLoad event never fires, inject the listener after a generous delay.
+        Runnable fallback = () -> {
+            fallbackInjectionMap.remove(view);
+            view.injectListenerToWebView();
+        };
+        fallbackInjectionMap.put(view, fallback);
+        handler.postDelayed(fallback, 3000);
     }
 
     @Override
