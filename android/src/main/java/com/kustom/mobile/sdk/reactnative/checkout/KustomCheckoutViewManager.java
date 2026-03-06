@@ -27,6 +27,8 @@ import java.util.WeakHashMap;
 public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeObserverWrapperView<KustomCheckoutView>> {
 
     private static final int MAX_SET_SNIPPET_RETRIES = 3;
+    private static final long RETRY_DELAY_MS = 500;
+    private static final long FALLBACK_INJECTION_DELAY_MS = 3000;
     public static final String KUSTOM_CHECKOUT_VIEW_REACT_CLASS = "RNKustomCheckoutView";
     // Commands that can be triggered from RN
     public static final String COMMAND_SET_SNIPPET = "setSnippet";
@@ -107,7 +109,7 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
                 }
             };
             pendingRetryMap.put(resizeObserverWrapperView, retryRunnable);
-            handler.postDelayed(retryRunnable, 500);
+            handler.postDelayed(retryRunnable, RETRY_DELAY_MS);
         });
     }
 
@@ -231,7 +233,7 @@ public class KustomCheckoutViewManager extends RNKustomCheckoutViewSpec<ResizeOb
             view.injectListenerToWebView();
         };
         fallbackInjectionMap.put(view, fallback);
-        handler.postDelayed(fallback, 3000);
+        handler.postDelayed(fallback, FALLBACK_INJECTION_DELAY_MS);
     }
 
     @Override
