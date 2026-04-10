@@ -48,7 +48,7 @@ target 'RNKustomMobileSDK' do
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
 
-  pod 'KustomMobileSDK', '1.0.3'
+  pod 'KustomMobileSDK', '1.0.4'
 
   target 'RNKustomMobileSDKTests' do
     # Pods for testing
