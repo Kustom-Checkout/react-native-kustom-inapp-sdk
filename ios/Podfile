@@ -48,7 +48,7 @@ target 'RNKustomMobileSDK' do
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
 
-  pod 'KustomMobileSDK', '1.0.3'
+  pod 'KustomMobileSDK', '1.0.4'
 
   target 'RNKustomMobileSDKTests' do
     # Pods for testing
@@ -63,5 +63,15 @@ target 'RNKustomMobileSDK' do
       :mac_catalyst_enabled => false
     )
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
+
+    # Temporary fix to make it work on XCode 26.4 due to harder validation. Remove when bumping react native version. 
+    # https://github.com/facebook/react-native/pull/56225
+    installer.pods_project.targets.each do |target|
+      if target.name == 'fmt'
+        target.build_configurations.each do |config|
+          config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
+        end
+      end
+    end
   end
 end

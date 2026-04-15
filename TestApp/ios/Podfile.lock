@@ -11,7 +11,7 @@ PODS:
   - KlarnaMobileSDK (2.8.1):
     - KlarnaMobileSDK/basic (= 2.8.1)
   - KlarnaMobileSDK/basic (2.8.1)
-  - KustomMobileSDK (1.0.3):
+  - KustomMobileSDK (1.0.4):
     - KlarnaMobileSDK (~> 2.8.1)
   - RCT-Folly (2024.11.18.00):
     - boost
@@ -1653,14 +1653,14 @@ PODS:
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
     - SocketRocket
-  - react-native-kustom-inapp-sdk (1.0.1):
+  - react-native-kustom-inapp-sdk (1.0.2):
     - boost
     - DoubleConversion
     - fast_float
     - fmt
     - glog
     - hermes-engine
-    - KustomMobileSDK (= 1.0.3)
+    - KustomMobileSDK (= 1.0.4)
     - RCT-Folly
     - RCT-Folly/Fabric
     - RCTRequired
@@ -2558,7 +2558,7 @@ SPEC CHECKSUMS:
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
   hermes-engine: 7068e976238b29e97b3bafd09a994542af7d5c0b
   KlarnaMobileSDK: 5c3d064082e683353fc76a9fcd771ceea30f0f35
-  KustomMobileSDK: e6e4994e56646ba4eff70a642c6eee0736392bed
+  KustomMobileSDK: eb768d7f13c06acfff5907f88c4c44a7011607e1
   RCT-Folly: 59ec0ac1f2f39672a0c6e6cecdd39383b764646f
   RCTDeprecation: ff787f6c860a1b97dd1bc27264b61d23ad1994da
   RCTRequired: 664eb8399ed8a83e26ab65af7c2ad390f7e61696
@@ -2592,7 +2592,7 @@ SPEC CHECKSUMS:
   React-logger: b69e65dc60f768e5509ac0cc27a360124bf70478
   React-Mapbuffer: b48f9f3311fd0ec0f7a5dc39d707eff521fb5f38
   React-microtasksnativemodule: d8568d0485a350c720c061ae835e09fc88c28715
-  react-native-kustom-inapp-sdk: 790a07b400d363afcc3de557c8ac1ddb801b8d7d
+  react-native-kustom-inapp-sdk: 0fb8fb7ee6e53b38e29a9ce5c5a936cc7f78dcd9
   react-native-safe-area-context: 6775aa9089fa84b77abd7ebdcf45e224a2a2ad3e
   React-NativeModulesApple: f10596688a03af66804cfbe61792be24a7888da8
   React-oscompat: 7c0a341cc31e350da71ddf2e46de0a845d1d1626
@@ -2629,6 +2629,6 @@ SPEC CHECKSUMS:
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 0c4b7d2aacc910a1f702694fa86be830386f4ceb
 
-PODFILE CHECKSUM: 443e80732c1761d67d1c791c5ed66f6de09cbb2d
+PODFILE CHECKSUM: c646a0e31b8c9949c9a11258607a1665541b9c5d
 
 COCOAPODS: 1.14.3
