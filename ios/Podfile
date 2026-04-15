@@ -64,6 +64,8 @@ target 'RNKustomMobileSDK' do
     )
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
 
+    # Temporary fix to make it work on XCode 26.4 due to harder validation. Remove when bumping react native version. 
+    # https://github.com/facebook/react-native/pull/56225
     installer.pods_project.targets.each do |target|
       if target.name == 'fmt'
         target.build_configurations.each do |config|
