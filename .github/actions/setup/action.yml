@@ -27,6 +27,6 @@ runs:
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: |
-        yarn install --frozen-lockfile
-        (cd TestApp;yarn install --frozen-lockfile)
+        yarn install --immutable
+        (cd TestApp;yarn install --immutable)
       shell: bash
