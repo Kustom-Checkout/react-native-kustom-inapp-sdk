@@ -21,7 +21,9 @@ export class KustomCheckoutView extends Component<
   KustomCheckoutViewProps,
   KustomCheckoutViewState
 > {
-  checkoutViewRef: React.RefObject<React.ComponentRef<typeof RNKustomCheckoutView> | null>;
+  checkoutViewRef: React.RefObject<React.ComponentRef<
+    typeof RNKustomCheckoutView
+  > | null>;
   private snippet: string | null = null;
   private isCheckoutViewReady = false;
 
@@ -30,7 +32,8 @@ export class KustomCheckoutView extends Component<
     this.state = {
       nativeViewHeight: 0,
     };
-    this.checkoutViewRef = React.createRef<React.ComponentRef<typeof RNKustomCheckoutView>>();
+    this.checkoutViewRef =
+      React.createRef<React.ComponentRef<typeof RNKustomCheckoutView>>();
     this.isCheckoutViewReady = false;
   }
 
