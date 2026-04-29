@@ -10,7 +10,7 @@ runs:
     - name: Setup Node.js
       uses: actions/setup-node@v6
       with:
-        node-version: '18.17.1'
+        node-version: '22'
         cache: 'yarn'
 
     - name: Cache Yarn dependencies
@@ -27,6 +27,6 @@ runs:
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: |
-        yarn install --frozen-lockfile
-        (cd TestApp;yarn install --frozen-lockfile)
+        yarn install --immutable
+        (cd TestApp;yarn install --immutable)
       shell: bash

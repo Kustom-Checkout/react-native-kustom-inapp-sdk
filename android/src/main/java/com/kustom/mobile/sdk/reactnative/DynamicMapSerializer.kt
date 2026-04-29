@@ -1,4 +1,4 @@
-package com.kustom.mobile.sdk.reactnative.common.serializer
+package com.kustom.mobile.sdk.reactnative
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,38 +67,30 @@ object DynamicMapSerializer : KSerializer<Map<String, Any?>> {
                     }
                 }
             }
-
             is Collection<*> -> {
                 buildJsonArray {
                     value.forEach { add(serializeValue(it, encoder)) }
                 }
             }
-
             is Array<*> -> {
                 buildJsonArray {
                     value.forEach { add(serializeValue(it, encoder)) }
                 }
             }
-
             else -> {
                 serializerFor(encoder.serializersModule, value)?.let { serializer ->
-                    // Use the serializer to convert the object to JsonElement
-                    val jsonElement = encoder.json.encodeToJsonElement(serializer, value)
-                    jsonElement
+                    encoder.json.encodeToJsonElement(serializer, value)
                 } ?: run {
-                    // Check if it's a data class
                     if (value::class.isData) {
-                        // Convert data class to Map by using reflection
                         val properties = value::class.memberProperties
                             .associate { it.name to it.call(value) }
-
                         buildJsonObject {
                             properties.forEach { (k, v) ->
                                 put(k, serializeValue(v, encoder))
                             }
                         }
                     } else {
-                        JsonPrimitive(value.toString()) // Fallback to string representation
+                        JsonPrimitive(value.toString())
                     }
                 }
             }
@@ -112,17 +104,14 @@ object DynamicMapSerializer : KSerializer<Map<String, Any?>> {
                     element.isString -> element.content
                     element.content.equals("true", ignoreCase = true) -> true
                     element.content.equals("false", ignoreCase = true) -> false
-                    // Try parsing as numbers with proper type detection
                     element.content.contains('.') -> {
                         element.doubleOrNull ?: element.floatOrNull ?: element.content
                     }
-
                     else -> {
                         element.longOrNull ?: element.intOrNull ?: element.content
                     }
                 }
             }
-
             is JsonObject -> element.mapValues { (_, value) -> deserializeValue(value) }
             is JsonArray -> element.map { deserializeValue(it) }
         }

@@ -1,14 +1,9 @@
-import React, { Component, type RefObject } from 'react';
-import type {
-  NativeMethods,
-  NativeSyntheticEvent,
-  ViewStyle,
-} from 'react-native';
+import React, { Component } from 'react';
+import type { NativeSyntheticEvent, ViewStyle } from 'react-native';
 import type { KustomProductEvent } from './types/common/KustomProductEvent';
 import type { KustomMobileSDKError } from './types/common/KustomMobileSDKError';
 import RNKustomCheckoutView, {
   Commands as RNKustomCheckoutViewCommands,
-  type RNKustomCheckoutViewProps,
 } from './specs/KustomCheckoutViewNativeComponent';
 
 export interface KustomCheckoutViewProps {
@@ -26,9 +21,9 @@ export class KustomCheckoutView extends Component<
   KustomCheckoutViewProps,
   KustomCheckoutViewState
 > {
-  checkoutViewRef: RefObject<
-    Component<RNKustomCheckoutViewProps> & Readonly<NativeMethods>
-  >;
+  checkoutViewRef: React.RefObject<React.ComponentRef<
+    typeof RNKustomCheckoutView
+  > | null>;
   private snippet: string | null = null;
   private isCheckoutViewReady = false;
 
@@ -37,7 +32,8 @@ export class KustomCheckoutView extends Component<
     this.state = {
       nativeViewHeight: 0,
     };
-    this.checkoutViewRef = React.createRef();
+    this.checkoutViewRef =
+      React.createRef<React.ComponentRef<typeof RNKustomCheckoutView>>();
     this.isCheckoutViewReady = false;
   }
 
