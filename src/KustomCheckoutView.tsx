@@ -54,6 +54,7 @@ export class KustomCheckoutView extends Component<
           width: '100%',
           height: this.state.nativeViewHeight,
           flexShrink: 1,
+          ...this.props.style,
         }}
         returnUrl={this.props.returnUrl || ''}
         onEvent={(
