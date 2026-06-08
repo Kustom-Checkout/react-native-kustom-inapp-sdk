@@ -51,6 +51,7 @@ public class ResizeObserverWrapperView<T extends ViewGroup> extends WrapperView<
                     for (int i = 0; i < getChildCount(); i++) {
                         View view = getChildAt(i);
                         setViewHeight(view, height);
+                        setViewHeight(findWebView(getView()), height);
                     }
                 }
             }
