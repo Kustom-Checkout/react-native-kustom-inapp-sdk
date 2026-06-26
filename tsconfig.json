@@ -22,5 +22,5 @@
     "target": "esnext",
     "verbatimModuleSyntax": true
   },
-  "exclude": ["TestApp"]
+  "exclude": ["example", "node_modules"]
 }

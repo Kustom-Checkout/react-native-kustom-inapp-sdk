@@ -15,14 +15,10 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Lint Check
-        run: |
-          yarn lint
-          (cd TestApp;yarn lint)
+        run: yarn lint
 
       - name: Format Check
-        run: |
-          yarn prettier
-          (cd TestApp;yarn prettier)
+        run: yarn prettier
 
       - name: Typecheck files
         run: yarn typecheck
