@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  BUNDLE_GEMFILE: ${{ github.workspace }}/TestApp/Gemfile
+  BUNDLE_GEMFILE: ${{ github.workspace }}/example/Gemfile
 
 jobs:
   build-testapp-android:
@@ -24,11 +24,9 @@ jobs:
       - name: Prepare Android
         uses: ./.github/actions/prepare-android
 
-      - name: Bundle TestApp JS for Android
-        run: mkdir TestApp/android/app/src/main/assets && (cd TestApp;yarn bundle:android)
-
-      - name: Build TestApp for Android
+      - name: Build example for Android
         run: |
+          mkdir -p example/android/app/src/main/assets
           yarn run build:android
 
   build-testapp-newarch-android:
@@ -43,11 +41,9 @@ jobs:
       - name: Prepare Android
         uses: ./.github/actions/prepare-android
 
-      - name: Bundle TestApp JS for Android
-        run: mkdir TestApp/android/app/src/main/assets && (cd TestApp;yarn bundle:android)
-
-      - name: Build TestApp for Android
+      - name: Build example for Android (new arch)
         run: |
+          mkdir -p example/android/app/src/main/assets
           ORG_GRADLE_PROJECT_newArchEnabled=true yarn run build:android
 
   build-testapp-ios:
@@ -62,14 +58,11 @@ jobs:
       - name: Prepare iOS
         uses: ./.github/actions/prepare-ios
 
-      - name: Install TestApp cocoapods
+      - name: Install example cocoapods
         run: |
-          (cd TestApp/ios;bundle exec pod install)
+          (cd example/ios;bundle exec pod install)
 
-      - name: Bundle TestApp JS for iOS
-        run: (cd TestApp;yarn bundle:ios)
-
-      - name: Build TestApp for iOS
+      - name: Build example for iOS
         run: |
           yarn run build:ios
 
@@ -85,13 +78,10 @@ jobs:
       - name: Prepare iOS
         uses: ./.github/actions/prepare-ios
 
-      - name: Install TestApp cocoapods
+      - name: Install example cocoapods (new arch)
         run: |
-          (cd TestApp/ios;rm Podfile.lock;RCT_NEW_ARCH_ENABLED=1 bundle exec pod install)
+          (cd example/ios;rm Podfile.lock;RCT_NEW_ARCH_ENABLED=1 bundle exec pod install)
 
-      - name: Bundle TestApp JS for iOS
-        run: (cd TestApp;yarn bundle:ios)
-
-      - name: Build TestApp for iOS
+      - name: Build example for iOS (new arch)
         run: |
           yarn run build:ios

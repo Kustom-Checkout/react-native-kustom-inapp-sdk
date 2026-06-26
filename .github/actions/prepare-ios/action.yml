@@ -9,7 +9,7 @@ runs:
       with:
         path: |
           ios/Pods
-          TestApp/ios/Pods
+          example/ios/Pods
         key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-pods-
