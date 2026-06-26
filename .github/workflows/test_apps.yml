@@ -80,7 +80,7 @@ jobs:
 
       - name: Install example cocoapods (new arch)
         run: |
-          (cd example/ios;rm Podfile.lock;RCT_NEW_ARCH_ENABLED=1 bundle exec pod install)
+          (cd example/ios;rm -f Podfile.lock;RCT_NEW_ARCH_ENABLED=1 bundle exec pod install)
 
       - name: Build example for iOS (new arch)
         run: |
