@@ -98,7 +98,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  CFPropertyList (< 3.0.9)
   activesupport (>= 6.1.7.5, != 7.1.0)
   benchmark
   bigdecimal
