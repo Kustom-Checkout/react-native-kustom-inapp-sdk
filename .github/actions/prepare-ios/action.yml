@@ -1,6 +1,12 @@
 name: Prepare iOS
 description: Prepare iOS environment
 
+inputs:
+  cache-suffix:
+    description: 'Optional suffix appended to the pod cache key'
+    required: false
+    default: ''
+
 runs:
   using: composite
   steps:
@@ -10,9 +16,9 @@ runs:
         path: |
           ios/Pods
           example/ios/Pods
-        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        key: ${{ runner.os }}-pods${{ inputs.cache-suffix }}-${{ hashFiles('**/Podfile.lock') }}
         restore-keys: |
-          ${{ runner.os }}-pods-
+          ${{ runner.os }}-pods${{ inputs.cache-suffix }}-
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:

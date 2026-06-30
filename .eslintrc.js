@@ -15,7 +15,7 @@ module.exports = {
   ignorePatterns: [
     '.eslintrc.js',
     'lib/**/*',
-    'TestApp/**/*'
+    'example/**/*'
   ],
   extends: ['@react-native', 'prettier'],
 };

@@ -11083,14 +11083,14 @@ __metadata:
     "@types/react": "npm:^19.2.0"
     react: "npm:19.2.3"
     react-native: "npm:0.85.0"
-    react-native-kustom-inapp-sdk: "npm:*"
+    react-native-kustom-inapp-sdk: "workspace:*"
     react-native-monorepo-config: "npm:^0.4.0"
     react-native-safe-area-context: "npm:^5.4.0"
     react-native-screens: "npm:^4.11.1"
   languageName: unknown
   linkType: soft
 
-"react-native-kustom-inapp-sdk@npm:*, react-native-kustom-inapp-sdk@workspace:.":
+"react-native-kustom-inapp-sdk@workspace:*, react-native-kustom-inapp-sdk@workspace:.":
   version: 0.0.0-use.local
   resolution: "react-native-kustom-inapp-sdk@workspace:."
   dependencies:
