@@ -48,8 +48,7 @@ describe('KustomCheckoutView', () => {
       />
     );
 
-    getNativeProps = () =>
-      UNSAFE_getByType(RNKustomCheckoutView as any).props;
+    getNativeProps = () => UNSAFE_getByType(RNKustomCheckoutView as any).props;
   });
 
   afterEach(() => {
