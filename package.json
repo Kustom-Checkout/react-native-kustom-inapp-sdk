@@ -49,8 +49,13 @@
     "test:ios": "cd ios && xcodebuild test -workspace RNKustomMobileSDK.xcworkspace -scheme RNKustomMobileSDK -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 16'",
     "build:android": "cd TestApp/android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
     "build:ios": "cd TestApp/ios && xcodebuild -workspace TestApp.xcworkspace -scheme TestApp -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
-    "TestApp": "yarn --cwd TestApp"
+    "bundle:android": "yarn workspace TestApp bundle:android",
+    "bundle:ios": "yarn workspace TestApp bundle:ios",
+    "TestApp": "yarn workspace TestApp"
   },
+  "workspaces": [
+    "TestApp"
+  ],
   "keywords": [
     "react-native",
     "kustom",
@@ -89,10 +94,8 @@
     "react": "18.2.0",
     "react-native": "0.72.4",
     "react-native-builder-bob": "^0.43.0",
+    "turbo": "^2.9.16",
     "typescript": "^5.0.2"
-  },
-  "engines": {
-    "node": ">=20.19.0"
   },
   "packageManager": "yarn@4.4.0",
   "react-native-builder-bob": {

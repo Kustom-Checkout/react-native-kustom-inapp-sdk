@@ -25,7 +25,7 @@ jobs:
         uses: ./.github/actions/prepare-android
 
       - name: Bundle TestApp JS for Android
-        run: mkdir TestApp/android/app/src/main/assets && (cd TestApp;yarn bundle:android)
+        run: mkdir TestApp/android/app/src/main/assets && yarn bundle:android
 
       - name: Build TestApp for Android
         run: |
@@ -44,7 +44,7 @@ jobs:
         uses: ./.github/actions/prepare-android
 
       - name: Bundle TestApp JS for Android
-        run: mkdir TestApp/android/app/src/main/assets && (cd TestApp;yarn bundle:android)
+        run: mkdir TestApp/android/app/src/main/assets && yarn bundle:android
 
       - name: Build TestApp for Android
         run: |
@@ -67,7 +67,7 @@ jobs:
           (cd TestApp/ios;bundle exec pod install)
 
       - name: Bundle TestApp JS for iOS
-        run: (cd TestApp;yarn bundle:ios)
+        run: yarn bundle:ios
 
       - name: Build TestApp for iOS
         run: |
@@ -90,7 +90,7 @@ jobs:
           (cd TestApp/ios;rm Podfile.lock;RCT_NEW_ARCH_ENABLED=1 bundle exec pod install)
 
       - name: Bundle TestApp JS for iOS
-        run: (cd TestApp;yarn bundle:ios)
+        run: yarn bundle:ios
 
       - name: Build TestApp for iOS
         run: |

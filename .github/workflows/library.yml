@@ -17,12 +17,12 @@ jobs:
       - name: Lint Check
         run: |
           yarn lint
-          (cd TestApp;yarn lint)
+          yarn workspace TestApp lint
 
       - name: Format Check
         run: |
           yarn prettier
-          (cd TestApp;yarn prettier)
+          yarn workspace TestApp prettier
 
       - name: Typecheck files
         run: yarn typecheck
