@@ -43,18 +43,16 @@
     "lint:fix": "eslint \"src/**/*.{js,ts,tsx}\" --fix",
     "prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "clean": "del-cli android/build ios/build TestApp/android/build TestApp/android/app/build TestApp/ios/build",
+    "clean": "del-cli android/build ios/build example/android/build example/android/app/build example/ios/build",
     "pods": "pod-install --quiet",
-    "test:android": "cd TestApp/android && ./gradlew :react-native-kustom-inapp-sdk:testDebugUnitTest && cd ../..",
+    "test:android": "cd example/android && ./gradlew :react-native-kustom-inapp-sdk:testDebugUnitTest && cd ../..",
     "test:ios": "cd ios && xcodebuild test -workspace RNKustomMobileSDK.xcworkspace -scheme RNKustomMobileSDK -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 16'",
-    "build:android": "cd TestApp/android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
-    "build:ios": "cd TestApp/ios && xcodebuild -workspace TestApp.xcworkspace -scheme TestApp -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
-    "bundle:android": "yarn workspace TestApp bundle:android",
-    "bundle:ios": "yarn workspace TestApp bundle:ios",
-    "TestApp": "yarn workspace TestApp"
+    "build:android": "cd example/android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
+    "build:ios": "cd example/ios && xcodebuild -workspace TsLibExample.xcworkspace -scheme TsLibExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
+    "example": "yarn workspace react-native-kustom-inapp-sdk-example"
   },
   "workspaces": [
-    "TestApp"
+    "example"
   ],
   "keywords": [
     "react-native",
