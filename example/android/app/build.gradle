@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "tslib.example"
+    namespace "kustominappsdk.example"
     defaultConfig {
-        applicationId "tslib.example"
+        applicationId "kustominappsdk.example"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

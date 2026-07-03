@@ -18,4 +18,15 @@ buildscript {
     }
 }
 
+allprojects {
+    repositories {
+        maven { url 'https://x.klarnacdn.net/mobile-sdk/' }
+        maven { url 'https://x.kustomcdn.co/mobile-sdk/android/'
+                content {
+                    includeGroup "com.kustom.mobile.sdk"
+                }
+            }
+    }
+}
+
 apply plugin: "com.facebook.react.rootproject"

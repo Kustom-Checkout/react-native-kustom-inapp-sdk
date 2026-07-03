@@ -1,23 +1,36 @@
-import { View, StyleSheet } from 'react-native';
-import { TsLibView } from 'react-native-ts-lib';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './home/HomeScreen';
+import KustomCheckoutScreen from './checkout/KustomCheckoutScreen';
 
-export default function App() {
+const Stack = createNativeStackNavigator<AppStackParamList>();
+
+const AppStack = () => {
   return (
-    <View style={styles.container}>
-      <TsLibView color="#32a852" style={styles.box} />
-    </View>
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ title: 'Kustom Mobile SDK Example' }}
+      />
+      <Stack.Screen name="KustomCheckout" component={KustomCheckoutScreen} />
+    </Stack.Navigator>
+  );
+};
+
+function App() {
+  return (
+    <NavigationContainer>
+      <AppStack />
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
+type AppStackParamList = {
+  Home: undefined;
+  KustomCheckout: undefined;
+};
+
+export default App;
+export type { AppStackParamList };

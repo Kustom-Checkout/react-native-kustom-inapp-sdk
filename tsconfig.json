@@ -22,5 +22,5 @@
     "types": ["jest"],
     "verbatimModuleSyntax": true
   },
-  "exclude": ["TestApp", "example"]
+  "exclude": ["example"]
 }
