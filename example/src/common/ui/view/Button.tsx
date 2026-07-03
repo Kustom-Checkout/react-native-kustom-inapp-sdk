@@ -1,4 +1,3 @@
-import React from 'react';
 import { Text, Pressable } from 'react-native';
 import styles from '../Styles';
 

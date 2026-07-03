@@ -1,9 +1,19 @@
 import { Keyboard, Text, TextInput, useColorScheme, View } from 'react-native';
-import { KustomCheckoutView } from 'react-native-kustom-inapp-sdk';
+import {
+  KustomCheckoutView,
+  type KustomCheckoutViewProps,
+} from 'react-native-kustom-inapp-sdk';
 import React, { useRef, useState } from 'react';
 import styles, { backgroundStyle } from '../common/ui/Styles';
 import Button from '../common/ui/view/Button';
 import testProps from '../common/util/TestProps';
+
+// root pins react 18 (src/ typecheck baseline), example pins react 19 - JSX element
+// check fails across the two. Remove this cast once the RN 0.72->0.85 bump unifies
+// react versions across root and example.
+const CheckoutView = KustomCheckoutView as unknown as React.ComponentType<
+  KustomCheckoutViewProps & React.RefAttributes<KustomCheckoutView>
+>;
 
 export default function KustomCheckoutScreen(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -85,7 +95,7 @@ export default function KustomCheckoutScreen(): React.JSX.Element {
         </View>
         <Text {...testProps('state_events')}>{eventState}</Text>
       </View>
-      <KustomCheckoutView
+      <CheckoutView
         ref={checkoutViewRef}
         style={styles.columnItemFill}
         returnUrl={'returnUrl://'}

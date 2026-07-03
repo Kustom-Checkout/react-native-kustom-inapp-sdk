@@ -1,8 +1,15 @@
 {
   "compilerOptions": {
     "rootDir": ".",
+    "paths": {
+      "react-native-kustom-inapp-sdk": ["./src/index"]
+    },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
+    "customConditions": [
+      "react-native-kustom-inapp-sdk-source",
+      "react-native-strict-api"
+    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
@@ -21,6 +28,5 @@
     "target": "ESNext",
     "types": ["jest"],
     "verbatimModuleSyntax": true
-  },
-  "exclude": ["example"]
+  }
 }
