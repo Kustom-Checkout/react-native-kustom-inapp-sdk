@@ -51,10 +51,10 @@ export class KustomCheckoutView extends Component<
         ref={this.checkoutViewRef}
         /* eslint-disable-next-line react-native/no-inline-styles */
         style={{
+          ...this.props.style,
           width: '100%',
           height: this.state.nativeViewHeight,
           flexShrink: 1,
-          ...this.props.style,
         }}
         returnUrl={this.props.returnUrl || ''}
         onEvent={(
