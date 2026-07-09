@@ -1,27 +1,32 @@
 {
   "compilerOptions": {
     "rootDir": ".",
-    "baseUrl": "./",
+    "paths": {
+      "react-native-kustom-inapp-sdk": ["./src/index"]
+    },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
+    "customConditions": [
+      "react-native-kustom-inapp-sdk-source",
+      "react-native-strict-api"
+    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
-    "lib": ["esnext"],
-    "module": "esnext",
+    "jsx": "react-jsx",
+    "lib": ["ESNext"],
+    "module": "ESNext",
     "moduleResolution": "bundler",
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "noImplicitUseStrict": false,
-    "noStrictGenericChecks": false,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext",
+    "target": "ESNext",
+    "types": ["jest"],
     "verbatimModuleSyntax": true
-  },
-  "exclude": ["TestApp"]
+  }
 }
