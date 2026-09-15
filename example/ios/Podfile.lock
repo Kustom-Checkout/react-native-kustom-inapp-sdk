@@ -6,7 +6,7 @@ PODS:
   - KlarnaMobileSDK (2.8.1):
     - KlarnaMobileSDK/basic (= 2.8.1)
   - KlarnaMobileSDK/basic (2.8.1)
-  - KustomMobileSDK (1.0.4):
+  - KustomMobileSDK (1.0.5):
     - KlarnaMobileSDK (~> 2.8.1)
   - RCTDeprecation (0.85.0)
   - RCTRequired (0.85.0)
@@ -1367,9 +1367,9 @@ PODS:
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
-  - react-native-kustom-inapp-sdk (1.0.4):
+  - react-native-kustom-inapp-sdk (1.0.5):
     - hermes-engine
-    - KustomMobileSDK (= 1.0.4)
+    - KustomMobileSDK (= 1.0.5)
     - RCTRequired
     - RCTTypeSafety
     - React-Core
@@ -1390,7 +1390,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-safe-area-context (5.8.0):
+  - react-native-safe-area-context (5.9.1):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1402,8 +1402,8 @@ PODS:
     - React-graphics
     - React-ImageManager
     - React-jsi
-    - react-native-safe-area-context/common (= 5.8.0)
-    - react-native-safe-area-context/fabric (= 5.8.0)
+    - react-native-safe-area-context/common (= 5.9.1)
+    - react-native-safe-area-context/fabric (= 5.9.1)
     - React-NativeModulesApple
     - React-RCTFabric
     - React-renderercss
@@ -1414,7 +1414,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-safe-area-context/common (5.8.0):
+  - react-native-safe-area-context/common (5.9.1):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1436,7 +1436,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-safe-area-context/fabric (5.8.0):
+  - react-native-safe-area-context/fabric (5.9.1):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1844,7 +1844,7 @@ PODS:
     - React-utils (= 0.85.0)
     - ReactNativeDependencies
   - ReactNativeDependencies (0.85.0)
-  - RNScreens (4.25.2):
+  - RNScreens (4.28.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1866,9 +1866,9 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
-    - RNScreens/common (= 4.25.2)
+    - RNScreens/common (= 4.28.0)
     - Yoga
-  - RNScreens/common (4.25.2):
+  - RNScreens/common (4.28.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -2136,7 +2136,7 @@ SPEC CHECKSUMS:
   FBLazyVector: c00c20551d40126351a6783c47ce75f5b374851b
   hermes-engine: c9bdbd20995bb36b5365059c4734185269372430
   KlarnaMobileSDK: 5c3d064082e683353fc76a9fcd771ceea30f0f35
-  KustomMobileSDK: eb768d7f13c06acfff5907f88c4c44a7011607e1
+  KustomMobileSDK: 223385499fe4d83bdd9109353c779f4107d4bbf3
   RCTDeprecation: 3bb167081b134461cfeb875ff7ae1945f8635257
   RCTRequired: 74839f55d5058a133a0bc4569b0afec750957f64
   RCTSwiftUI: 87a316382f3eab4dd13d2a0d0fd2adcce917361a
@@ -2173,8 +2173,8 @@ SPEC CHECKSUMS:
   React-logger: ee47d5f3b59a46a006c65038ed5d0b1143e37510
   React-Mapbuffer: 7f8bfbe3fcb2203db4ccb3975414af8cabe4bcd0
   React-microtasksnativemodule: ca1f33f7c98b76d923f550d39631eb4e05fa9aec
-  react-native-kustom-inapp-sdk: dff520cfae6f85d2342e7a5109b5a64ba737786d
-  react-native-safe-area-context: fb5c8ee9f6dd62ef710611b3d370c501f42a4ac0
+  react-native-kustom-inapp-sdk: 4416b35f5fcd8746f1a92e52b7d37e8f852e7fbd
+  react-native-safe-area-context: 8368d1052ccc8fe8725adfb6a83498c8bdb48250
   React-NativeModulesApple: 9c1f8815ebd72cc1c75587fe588513f6dd9cb708
   React-networking: 8f75f882c6794e91e28b458b5bc1461034098c80
   React-oscompat: 5361d0fa7905ba1c3b3c5e7c464d6be9d2d85f4b
@@ -2209,7 +2209,7 @@ SPEC CHECKSUMS:
   ReactCodegen: b3184a229afd01e7f8058dd81b805b843caa2bf9
   ReactCommon: fe2a3af8975e63efa60f95fca8c34dc85deee360
   ReactNativeDependencies: 6b38939d8aa22efe952a5a879c0e98092e7e5342
-  RNScreens: 991cc417cd396602a6cf59a42139e5a9d91462a9
+  RNScreens: eeca9fe79bacbb2de611b8d1baf20aa6e35c826b
   Yoga: e83c3121d079541e69f3c5c623faaaf933fb5812
 
 PODFILE CHECKSUM: c54a62938737857c002038687c6edd4071d1e382
