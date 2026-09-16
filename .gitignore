@@ -28,6 +28,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+**/.xcode.env.local
 
 # Android/IJ
 #
@@ -75,6 +76,10 @@ lib/
 # pods nonsense
 ios/Pods
 ios/Podfile.lock
+example/ios/Pods
+
+# Ruby
+example/vendor/
 
 # fastlane
 fastlane/report.xml
