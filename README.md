@@ -58,6 +58,10 @@ allprojects {
 }
 ```
 
+## Releasing
+
+Maintainers: see [RELEASING.md](RELEASING.md) for how to publish a new version to npm.
+
 ## License
 
 This project is licensed under
